@@ -135,6 +135,7 @@ async function calcContent () {
     text.value = calcEllText(div, maxHeight)
   } else {
     isEll.value = false
+    text.value = props.content;
   }
   document.body.removeChild(div)
 }

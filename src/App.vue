@@ -84,6 +84,22 @@
           </el-icon>
         </template>
       </TextEllipsis>
+
+      <h2>文本不足以省略时效果</h2>
+      <TextEllipsis 
+        style="max-width: 800px; padding: 10px;" 
+        :rows="3" 
+        :direction="direction"
+        content="永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。" 
+        :single="single2"
+        dot="...">
+        <template v-slot="{isExpand}">
+          {{ isExpand ? '收起' : '展开' }}<el-icon>
+            <ArrowUp v-if="isExpand" />
+            <ArrowDown v-else />
+          </el-icon>
+        </template>
+      </TextEllipsis>
     </section>
   </div>
 </template>
